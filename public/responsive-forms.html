@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox examples</title>
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        h1:nth-child(n+2) {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .fields { display: flex; flex-wrap: wrap;}
+        
+        .formSection { flex-grow: 1; min-width: 300px;}
+        /* basic styling */
+        
+        .formSection {
+            padding: 10px;
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        
+        button {
+            margin-left: 20px;
+        }
+    </style>
+    <form>
+        <div class="fields">
+            <div class="formSection">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+            </div>
+            <div class="formSection">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="formSection">
+                <label for="exampleInputEmail1">Username</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <label for="exampleInputEmail1">Recipient</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2">@example.com</span>
+                </div>
+                <label for="exampleInputEmail1">Amount</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default">Submit</button>
+    </form>
+</body>
+
+
+<!-- Latest compiled and minified JS -->
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox examples</title>
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        h1:nth-child(n+2) {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            height: 400px;
+        }
+        
+        .item { flex: 1;  position: relative;}
+        
+        .content-wrapper { position: absolute; top: 0; bottom: 0; right: 0; left: 0; overflow: auto;}
+        /* basic styles */
+        
+        .container {
+            background-color: tomato;
+            border: 4px solid lightgrey;
+            font-family: sans-serif;
+        }
+        
+        .item {
+            padding: 5px;
+        }
+    </style>
+    <div class="container">
+        <div class="item">
+            <div class="content-wrapper">
+                Eum illum ut dolor nostrum. Beatae excepturi mollitia dicta iure explicabo illo omnis. Nihil iusto quos dolores autem. Velit
+                corporis consequuntur voluptatem suscipit voluptates ut sequi. Illo eveniet aut id consectetur ipsa cumque
+                nulla dicta. Laborum voluptas libero quo aut ut doloremque. Quos voluptatem sed reprehenderit corporis. Aut
+                velit rem aut fuga excepturi. Distinctio quisquam dolor odit ut. Ad odio enim non architecto alias inventore.
+                Amet doloribus repellendus officiis ut. Id sed expedita et quam ducimus aut. Aperiam quam nihil illo quas.
+                Culpa molestiae adipisci quia laudantium vel. Quaerat laborum alias quod est assumenda a et. Velit architecto
+                et ut cupiditate nemo.
+            </div>
+        </div>
+        <div class="item">
+            <div class="content-wrapper">
+                Eum illum ut dolor nostrum. Beatae excepturi mollitia dicta iure explicabo illo omnis. Nihil iusto quos dolores autem. Velit
+                corporis consequuntur voluptatem suscipit voluptates ut sequi. Illo eveniet aut id consectetur ipsa cumque
+                nulla dicta. Laborum voluptas libero quo aut ut doloremque. Quos voluptatem sed reprehenderit corporis. Aut
+                velit rem aut fuga excepturi. Distinctio quisquam dolor odit ut. Ad odio enim non architecto alias inventore.
+                Amet doloribus repellendus officiis ut. Id sed expedita et quam ducimus aut. Aperiam quam nihil illo quas.
+                Culpa molestiae adipisci quia laudantium vel. Quaerat laborum alias quod est assumenda a et. Velit architecto
+                et ut cupiditate nemo. Voluptatibus ipsa et repellendus voluptate sint velit ut. Dolor eos atque maxime optio
+                eum. Aut a dolor laborum numquam. Numquam voluptas necessitatibus perferendis suscipit minus blanditiis et.
+                Eius eaque in quod dignissimos iure veniam laborum. Libero non consequatur exercitationem earum. Ipsam laborum
+                aspernatur facere.
+            </div>
+        </div>
+        <div class="item">
+            <div class="content-wrapper">
+                Eum illum ut dolor nostrum. Beatae excepturi mollitia dicta iure explicabo illo omnis. Nihil iusto quos dolores autem. Velit
+                corporis consequuntur voluptatem suscipit voluptates ut sequi. Illo eveniet aut id consectetur ipsa cumque
+                nulla dicta. Laborum voluptas libero quo aut ut doloremque.
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Latest compiled and minified JS -->
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</html>

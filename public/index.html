@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox examples</title>
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+           h1:nth-child(n+2) {
+                margin-top: 60px;
+            }
+        </style>
+</head>
+
+<body>
+    <h1 class="text-center">Basic Flexbox (1)</h1>
+    <style>
+        .container1 {
+            border: 4px solid saddlebrown;
+        }
+        
+        .container1>* {
+            border: 4px solid tomato;
+        }
+    </style>
+    <div class="container1">
+        <div class="item"> 1 </div>
+        <nav><a href="">Link1</a> </nav>
+        <div>3</div>
+        <button type="button" class="btn btn-default">button</button>
+    </div>
+
+    <h1 class="text-center">Flex-wrap (2)</h1>
+    <style>
+        .container2 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .container2>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 80px;
+            height: 40px;
+        }
+        
+        .container2>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container2.one {
+            flex-wrap: nowrap;
+        }
+        
+        .container2.two {
+            flex-wrap: wrap;
+        }
+        
+        .container2.three {
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+    <div class="container2 one">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+    </div>
+    <div class="container2 two">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+    </div>
+    <div class="container2 three">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+    </div>
+    
+    <h1 class="text-center">Justify Content (3)</h1>
+    <style>
+        .container3 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            margin-bottom: 10px;
+        }
+        
+        .container3>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 280px;
+            height: 40px;
+            margin-bottom:3px;
+        }
+        
+        .container3>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container3.one { 
+            justify-content: flex-start;
+        }
+        
+        .container3.two {
+            justify-content: flex-end;
+        }
+        
+        .container3.three {
+            justify-content: center;
+        }
+        
+        .container3.four {
+            justify-content: space-between;
+        }
+
+        .container3.five {
+            justify-content: space-around;
+
+        }
+    </style>
+    <div class="container3 one">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container3 two">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container3 three">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container3 four">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container3 five">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+
+    <h1 class="text-center">Flex Direction (4)</h1>
+    <style>
+        .container4 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            flex-wrap: wrap;
+            /*flex-wrap: wrap-reverse;*/
+            margin-bottom: 10px;
+        }
+        
+        .container4>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 280px;
+            height: 40px;
+            margin-bottom:3px;
+        }
+        
+        .container4>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container4.one { 
+            flex-direction: row;
+        }
+        
+        .container4.two {
+            flex-direction: row-reverse;
+        }
+        
+        .container4.three {
+            flex-direction: column;
+            height: 120px;
+        }
+        
+        .container4.four {
+            flex-direction: column-reverse;
+            height:120px;
+        }
+
+    </style>
+    <div class="container4 one">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container4 two">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container4 three">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container4 four">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+
+
+    <h1 class="text-center">Align Elements (5)</h1>
+    <style>
+        .container5 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            /*flex-wrap: wrap-reverse;*/
+            margin-bottom: 10px;
+            min-height: 100px;
+        }
+        
+        .container5>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 280px;
+            /*height: 40px;*/
+            margin-bottom:3px;
+        }
+        
+        .container5>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container5.one { 
+            align-items: stretch;
+        }
+        
+        .container5.two {
+            align-items: flex-start;
+        }
+        
+        .container5.three {
+            align-items: flex-end;
+        }
+        
+        .container5.four {
+            align-items: center;
+        }
+
+         .container5.five {
+            align-items: baseline;
+        }
+
+    </style>
+    <div class="container5 one">
+        <div>1 <br>- <br> - </div>
+        <div>2 <br> - <br> - <br> - </div>
+        <div><h2>3</h2> </div>
+        <div>4 <br> - <br> </div>
+    </div>
+    <div class="container5 two">
+        <div>1 <br>- <br> - </div>
+        <div>2 <br> - <br> - <br> - </div>
+        <div><h2>3</h2> </div>
+        <div>4 <br> - <br> </div>
+    </div>
+    <div class="container5 three">
+        <div>1 <br>- <br> - </div>
+        <div>2 <br> - <br> - <br> - </div>
+        <div><h2>3</h2> </div>
+        <div>4 <br> - <br> </div>
+    </div>
+     <div class="container5 four">
+        <div>1 <br>- <br> - </div>
+        <div>2 <br> - <br> - <br> - </div>
+        <div><h2>3</h2> </div>
+        <div>4 <br> - <br> </div>
+    </div>
+    <div class="container5 five">
+        <div>1 <br>- <br> - </div>
+        <div>2 <br> - <br> - <br> - </div>
+        <div><h2>3</h2> </div>
+        <div><h1> 4 <h1><br> - <br> </div>
+    </div>
+
+
+    <h1 class="text-center">Align Content (6)</h1>
+    <style>
+        .container6 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            height: 100px;
+        }
+        
+        .container6>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 280px;
+            margin-bottom:3px;
+        }
+        
+        .container6>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container6.one { 
+            align-content: stretch;
+        }
+        
+        .container6.two {
+            align-content: flex-start;
+        }
+        
+        .container6.three {
+            align-content: flex-end;
+        }
+        
+        .container6.four {
+            align-content: center;
+        }
+
+         .container6.five {
+             align-content:  space-between;
+        }
+
+        .container6.six {
+            align-content: space-around;
+        }
+
+
+    </style>
+    <div class="container6 one">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container6 two">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="container6 three">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container6 four">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container6 five">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+     <div class="container6 six">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+      <h1 class="text-center">Order (7)</h1>
+    <style>
+        .container7 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            margin-bottom: 10px;
+            height: 100px;
+        }
+        
+        .container7>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 280px;
+            margin-bottom:3px;
+        }
+        
+        .container7>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container7 .one { 
+        }
+        
+        .container7 .two {
+            order:-1;
+        }
+        
+        .container7 .three {
+            order:0;
+        }
+        
+        .container7 .four {
+            order:-1;
+        }
+
+         .container7 .five {
+             order:-2;
+        }
+    </style>
+    <div class="container7">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+    </div>
+
+     <h1 class="text-center">Flex Grow (8)</h1>
+    <style>
+        .container8 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            margin-bottom: 10px;
+            height: 100px;
+        }
+        
+        .container8>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            /*width: 280px;*/
+            margin-bottom:3px;
+        }
+        
+        .container8>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container8 .one { 
+            flex-grow: 2;
+        }
+        
+        .container8 .two {
+            width:100px;
+        }
+        .container8 .three {
+            flex-grow: 3;
+        }
+        
+       
+    </style>
+    <div class="container8">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+   
+
+    <h1 class="text-center">Flex Shrink (9)</h1>
+    <style>
+        .container9 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            margin-bottom: 10px;
+            height: 100px;
+        }
+        
+        .container9>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            width: 280px;
+            margin-bottom:3px;
+        }
+        
+        .container9>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container9 .one { 
+        }
+        
+        .container9 .two {
+            flex-shrink: .5;
+        }
+        .container9 .three {
+            flex-shrink: 2;
+        }
+        .container .four {
+
+        }
+    </style>
+    <div class="container9">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+   
+
+        <h1 class="text-center">Flex Basis (10))</h1>
+    <style>
+        .container10 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            margin-bottom: 10px;
+            /*height: 100px;*/
+            flex-direction:  column;
+        }
+        
+        .container10>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            /*width: 280px;*/
+            margin-bottom:3px;
+            flex-basis: auto;
+        }
+        
+        .container10>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container10 .one { 
+            width: 50px;
+        }
+        
+        .container10 .two {
+            height: 100px;
+        }
+        .container10 .three {
+            width:50px;
+        }
+        .container .four {
+
+        }
+        
+       
+    </style>
+    <div class="container10">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+
+
+    <h1 class="text-center">Align Self (11)</h1>
+    <style>
+        .container11 {
+            border: 4px solid saddlebrown;
+            display: flex;
+            align-items: center;
+        }
+        
+        .container11>* {
+            background-color: #ea3556;
+            padding: 5px;
+            color: white;
+            margin-bottom:3px;
+            width: 50px;
+        }
+        
+        .container11>*:nth-child(even) {
+            background-color: #49aec0;
+        }
+        
+        .container11 .one   {  align-self: auto;   }        
+        .container11 .two   {  align-self: flex-start;  }
+        .container11 .three {  align-self: flex-end;  }
+        .container11 .four  {  align-self: center;  }
+        .container11 .five  {  align-self: stretch;  }
+        .container11 .six   {  align-self: baseline;}
+        .container11 .seven {  align-self: baseline; }
+        
+       
+    </style>
+    <div class="container11">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six"><h3>6</h3></div>
+        <div class="seven">7</div>
+    </div>
+   
+    
+
+</body>
+
+</html>

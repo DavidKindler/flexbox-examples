@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox examples</title>
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        h1:nth-child(n+2) {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        body {display: flex; flex-direction: column; height: 100vh; margin:0;}
+        
+        main {display: flex; flex-grow: 1;}
+        
+        article {flex-grow: 1;}
+        
+      
+        
+        /* basic styling */
+        
+        header,
+        footer,
+        nav,
+        article,
+        section,
+        aside {
+            padding: 10px;
+        }
+        
+        header {
+            background-color: tomato;
+        }
+        
+        footer {
+            background-color: turquoise;
+        }
+        
+        nav {
+            background-color: lightgrey;
+            width: 200px;
+        }
+        
+        aside {
+            background-color: lightblue;
+        }
+
+          @media screen and (max-width:600px) {
+            main {
+                flex-direction: column;
+            }            
+            aside { order: 1 ;}
+            nav {width: auto;}
+        }
+        
+    </style>
+    <header>
+        header
+    </header>
+    <main>
+        <nav>
+            nav
+        </nav>
+        <article>
+            content
+        </article>
+        <aside>
+            aside
+        </aside>
+    </main>
+    <footer>
+        footer
+    </footer>
+</body>
+
+</html>
